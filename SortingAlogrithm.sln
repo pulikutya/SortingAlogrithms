@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "SortingAlogrithm", "SortingAlogrithm.vcxproj", "{B5813C9E-34D5-49FE-96B0-7E379BC33312}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5813C9E-34D5-49FE-96B0-7E379BC33312}.Debug|x64.ActiveCfg = Debug|x64
+		{B5813C9E-34D5-49FE-96B0-7E379BC33312}.Debug|x64.Build.0 = Debug|x64
+		{B5813C9E-34D5-49FE-96B0-7E379BC33312}.Debug|x86.ActiveCfg = Debug|Win32
+		{B5813C9E-34D5-49FE-96B0-7E379BC33312}.Debug|x86.Build.0 = Debug|Win32
+		{B5813C9E-34D5-49FE-96B0-7E379BC33312}.Release|x64.ActiveCfg = Release|x64
+		{B5813C9E-34D5-49FE-96B0-7E379BC33312}.Release|x64.Build.0 = Release|x64
+		{B5813C9E-34D5-49FE-96B0-7E379BC33312}.Release|x86.ActiveCfg = Release|Win32
+		{B5813C9E-34D5-49FE-96B0-7E379BC33312}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AA63EE85-B875-4B7E-9977-30DDA3F1CBF1}
+	EndGlobalSection
+EndGlobal

@@ -71,3 +71,19 @@ void optimized_bubble_sort(num* arr, size_t len)
 		}
 	}
 }
+
+inline num* partition(num* arr, size_t len)
+{
+	return arr + len / 2;
+}
+
+void quick_sort(num* arr, size_t size)
+{
+	if (size < 2) { return; }
+	else
+	{
+		
+	}
+}
+
+

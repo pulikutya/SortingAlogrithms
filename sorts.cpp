@@ -104,9 +104,10 @@ void quick_sort(num* arr, size_t len)
 			}
 
 			
-			quick_sort(arr, iter1-arr);
-			quick_sort(iter1, (arr + len) - iter1);
+			
 		}
+		quick_sort(arr, iter1 - arr);
+		quick_sort(iter1, (arr + len) - iter1);
 	}
 	else
 	{

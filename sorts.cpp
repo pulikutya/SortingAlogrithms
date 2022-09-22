@@ -78,41 +78,35 @@ void quick_sort(num* arr, size_t len)
 {
 	if (len > 1)
 	{
-		//partition
-		
+		num* i = arr;
+		num* j = i + len-1;
+		bool ci = false;
 
-
-		num* iter1 = arr;
-		num* iter2 = arr + len - 1;
-		bool cri1 = false; //if true iter 1 moves if false iter2
-
-		while (iter1 != iter2)
+		while (i != j)
 		{
-			if (*iter1 > *iter2)
+			if (*j < *i)
 			{
-				Swap(num, *iter1, *iter2);
-				cri1 = !cri1;
+				Swap(num, *i, *j);
+				ci = !ci;
 			}
 
-			if (cri1)
-			{
-				iter1++;
-			}
-			else
-			{
-				iter2--;
-			}
-
-			
-			
+			if (ci) { i++; }
+			else { j--; }
 		}
-		quick_sort(arr, iter1 - arr);
-		quick_sort(iter1, (arr + len) - iter1);
+
+		size_t len1 = i - arr;
+		num* arr2 = i + 1; //can be unsafe
+		size_t len2 = arr + len - arr2;
+
+		if (len1 > 0)
+		{
+			quick_sort(arr, len1);
+		}
+		if (len2 > 0)
+		{
+			quick_sort(arr2, len2);
+		}
 	}
-	else
-	{
-		return;
-	}
-	
+	else { return; }
 }
 

@@ -109,4 +109,3 @@ void quick_sort(num* arr, size_t len)
 	}
 	else { return; }
 }
-

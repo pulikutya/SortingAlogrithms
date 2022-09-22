@@ -71,3 +71,47 @@ void optimized_bubble_sort(num* arr, size_t len)
 		}
 	}
 }
+
+
+
+void quick_sort(num* arr, size_t len)
+{
+	if (len > 1)
+	{
+		//partition
+		
+
+
+		num* iter1 = arr;
+		num* iter2 = arr + len - 1;
+		bool cri1 = false; //if true iter 1 moves if false iter2
+
+		while (iter1 != iter2)
+		{
+			if (*iter1 > *iter2)
+			{
+				Swap(num, *iter1, *iter2);
+				cri1 = !cri1;
+			}
+
+			if (cri1)
+			{
+				iter1++;
+			}
+			else
+			{
+				iter2--;
+			}
+
+			
+			quick_sort(arr, iter1-arr);
+			quick_sort(iter1, (arr + len) - iter1);
+		}
+	}
+	else
+	{
+		return;
+	}
+	
+}
+

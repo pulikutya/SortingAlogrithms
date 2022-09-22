@@ -11,9 +11,10 @@ void printIntArray(int* arr, size_t length)
 int main()
 {
 	int arr[10] = { 1, 5, 8, 3, 0, 9, 4, 6, 5, 2 };
-	printIntArray(arr, 10);
+	const size_t len = 10;
+	printIntArray(arr, len);
 	std::cout << "----\n";
-	optimized_bubble_sort(arr, 10);
-	printIntArray(arr, 10);
+	quick_sort(arr, len);
+	printIntArray(arr, len);
 	return 0;
 }

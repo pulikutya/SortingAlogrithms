@@ -9,3 +9,5 @@ void selection_sort(num* arr, size_t size);
 void bubble_sort(num* arr, size_t size);
 void optimized_bubble_sort(num* arr, size_t size);
 void quick_sort(num* arr, size_t size);
+void insertion_sort(num* arr, size_t size);
+void merge_sort(num* arr, size_t size);

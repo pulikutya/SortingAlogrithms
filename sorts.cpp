@@ -109,3 +109,33 @@ void quick_sort(num* arr, size_t len)
 	}
 	else { return; }
 }
+
+void insertion_sort(num* arr, size_t len)
+{
+	num* end = arr + len;
+	for (num* i = arr+1; i < end; i++)
+	{
+		for (num* j = i; j > arr; j--)
+		{
+			if (j[-1] > j[0])
+			{
+				Swap(num, j[0], j[-1]);
+			}
+			else { break; };
+		}
+	}
+}
+
+void merge_sort(num* arr, size_t len)
+{
+	if (len > 1)
+	{
+		size_t len2 = len / 2;
+		size_t len1 = len - len2;
+		num* arr2 = arr + len2;
+
+		//division
+		merge_sort();
+		merge_sort();
+	}
+}

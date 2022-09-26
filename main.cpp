@@ -18,7 +18,7 @@ int main()
 	
 	printIntArray(arr, len);
 	std::cout << "\n----\n";
-	quick_sort(arr, len);
+	insertion_sort(arr, len);
 	printIntArray(arr, len);
 	return 0;
 }

@@ -21,7 +21,6 @@ void selection_sort(num* i, size_t size)
 
 void bubble_sort(num* arr, size_t len)
 {
-	num* i = arr;
 	num* end = arr + len;
 	num* b_start = arr + 1;
 	bool n_sorted = true;
@@ -41,8 +40,7 @@ void bubble_sort(num* arr, size_t len)
 
 void optimized_bubble_sort(num* arr, size_t len)
 {
-	num* i = arr;
-	num* end = arr + len;
+	num* end = arr + len -1 ;
 	num* b_start = arr + 1;
 	bool n_sorted = true;
 	while (n_sorted)
@@ -50,7 +48,7 @@ void optimized_bubble_sort(num* arr, size_t len)
 		n_sorted = false;
 		
 		num* b = b_start;
-		while (b < end-1)
+		while (b < end)
 		{
 			if (b[0] < b[-1])
 			{
@@ -113,7 +111,7 @@ void quick_sort(num* arr, size_t len)
 void insertion_sort(num* arr, size_t len)
 {
 	num* end = arr + len;
-	for (num* i = arr+1; i < end; i++)
+	for (num* i = arr; i < end; i++)
 	{
 		for (num* j = i; j > arr; j--)
 		{
@@ -130,12 +128,58 @@ void merge_sort(num* arr, size_t len)
 {
 	if (len > 1)
 	{
-		size_t len2 = len / 2;
-		size_t len1 = len - len2;
-		num* arr2 = arr + len2;
+		size_t len2 = len / 2, len1 = len - len2;
+		num* arr2 = arr + len1;
+		
+		merge_sort(arr, len1);
+		merge_sort(arr2, len2);
 
-		//division
-		merge_sort();
-		merge_sort();
+		if(len > 2)
+		{	
+			num* marr = new num[len], * marrend = marr + len;
+			num* i = arr, * j = arr2;
+			num* end1 = i + len1, * end2 = j + len2;
+			for (num* x = marr; x < marrend; x++)
+			{
+				bool e1 = i < end1, e2 = j < end2;
+				if (e1 && e2)
+				{
+					if (*i < *j) {
+						*x = *i; 
+						i++;
+					}
+					else
+					{
+						*x = *j; 
+						j++;
+					}
+				}
+				else if (!e1 && e2)
+				{
+					*x = *j; 
+					j++;
+				}
+				else if (!e2 && e1)
+				{
+					*x = *i; 
+					i++;
+				}
+			}
+
+			for (num* c = marr; c < marrend; c++, arr++)
+			{
+				*arr = *c;
+			}
+
+			delete[len] marr;	
+		}
+		else
+		{
+			if (arr[0] > arr[1])
+			{
+				Swap(num, arr[0], arr[1]);
+			}
+		}
 	}
+	else { return; }
 }
